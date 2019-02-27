@@ -7,18 +7,21 @@
         git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-x.git
         npm run lint
 
- 2. Observe `foo()` in `App.vue` is formatted as:
+ 2. Observe `foo()` in `src/components/HelloWorld.vue` is formatted as:
 
-          export default class App extends Vue {
-            foo () {
-              const x = {
+        @Component
+          export default class HelloWorld extends Vue {
+        @Prop() private msg!: string;
+
+        foo () {                  ❌
+        const x = {               ❌
         a: [],
-        b: 1,             // <-- FIXME: should be indented
+        b: 1,                     ❌
         c: {},
-        d: 2              // <-- FIXME: should be indented
-              }
-              return x
-            }
+        d: 2                      ❌
+        }                         ❌
+        return x                  ❌
+        }                         ❌
           }
 
 ## Original project setup
@@ -49,9 +52,11 @@
           }
         ]
 
- 3. In `App.vue`, add the following unindented class method:
+ 3. In `src/components/HelloWorld.vue`, add the following unindented class method:
 
-        export default class App extends Vue {
+        @Component
+        export default class HelloWorld extends Vue {
+          @Prop() private msg!: string;
 
         foo() {
         const x = {
