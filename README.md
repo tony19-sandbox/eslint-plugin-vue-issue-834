@@ -1,10 +1,10 @@
-> Demo for linter bug in TypeScript projects, where lines are incorrectly untouched when configuring `vue/script-indent` to ignore nested objects/arrays ([`vuejs/eslint-plugin-vue#`]())
+> Demo for linter bug in TypeScript projects, where lines are incorrectly untouched when configuring `vue/script-indent` to ignore nested objects/arrays ([`vuejs/eslint-plugin-vue#834`](https://github.com/vuejs/eslint-plugin-vue/issues/834))
 
 ## Steps to reproduce
 
  1. Clone this repo, and run the linter:
 
-        git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-x.git
+        git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-834.git
         npm run lint
 
  2. Observe `foo()` in `src/components/HelloWorld.vue` is formatted as:
