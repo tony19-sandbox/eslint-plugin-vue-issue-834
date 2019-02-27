@@ -9,12 +9,32 @@
 import { Component, Vue } from 'vue-property-decorator'
 import HelloWorld from './components/HelloWorld.vue'
 
+const x = {
+a: [],
+b: 1,
+c: {},
+d: 2
+}
+console.log(x) // eslint no-console:off
+
 @Component({
   components: {
     HelloWorld
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+
+foo() {
+const x = {
+a: [],
+b: 1,
+c: {},
+d: 2
+}
+return x;
+}
+
+}
 </script>
 
 <style>
