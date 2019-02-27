@@ -2,11 +2,12 @@
 
 ## Steps to reproduce
 
- 1. Clone this repo with: `git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-x.git`
+ 1. Clone this repo, and run the linter:
 
- 2. Run the linter with: `npm run lint` or `yarn lint`.
+        git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-x.git
+        npm run lint
 
- 3. Observe `foo()` in `App.vue` is formatted as:
+ 2. Observe `foo()` in `App.vue` is formatted as:
 
           export default class App extends Vue {
             foo () {
