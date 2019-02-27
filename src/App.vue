@@ -15,7 +15,7 @@ b: 1,
 c: {},
 d: 2
 }
-console.log(x) // eslint no-console:off
+console.log(x) // eslint-disable-line no-console
 
 @Component({
   components: {
