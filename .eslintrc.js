@@ -23,6 +23,14 @@ module.exports = {
       }
     ]
   },
+  'overrides': [
+    {
+      'files': ['*.vue'],
+      'rules': {
+        'indent': 'off'
+      }
+    }
+  ],
   parserOptions: {
     parser: '@typescript-eslint/parser'
   }
