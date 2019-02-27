@@ -4,6 +4,26 @@ This project demonstrates a linter bug, where lines are incorrectly untouched wh
 
 ## Steps to reproduce
 
+ 1. Clone this repo with: `git clone https://github.com/tony19-sandbox/eslint-plugin-vue-issue-x.git`
+
+ 2. Run the linter with: `npm run lint` or `yarn lint`.
+
+ 3. Observe `foo()` in `App.vue` is formatted as:
+
+          export default class App extends Vue {
+            foo () {
+              const x = {
+        a: [],
+        b: 1,             // <-- FIXME: should be indented
+        c: {},
+        d: 2              // <-- FIXME: should be indented
+              }
+              return x
+            }
+          }
+
+## Original project setup
+
  1. Generate TypeScript project with Vue CLI, selecting the following features:
 
         Vue CLI v3.4.1
@@ -45,19 +65,3 @@ This project demonstrates a linter bug, where lines are incorrectly untouched wh
         }
 
         }
-
- 4. Run the linter with `npm run lint` or `yarn lint`.
-
- 5. Observe the method we added in `App.vue` is now:
-
-          export default class App extends Vue {
-            foo () {
-              const x = {
-        a: [],
-        b: 1,             // <-- FIXME: should be indented
-        c: {},
-        d: 2              // <-- FIXME: should be indented
-              }
-              return x
-            }
-          }
