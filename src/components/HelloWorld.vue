@@ -34,9 +34,28 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
+const x = {
+a: [],
+b: 1,
+c: {},
+d: 2
+}
+console.log(x) // eslint-disable-line no-console
+
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+@Prop() private msg!: string;
+
+foo() {
+const x = {
+a: [],
+b: 1,
+c: {},
+d: 2
+}
+return x;
+}
+
 }
 </script>
 
